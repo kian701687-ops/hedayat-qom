@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="وب‌سایت پرورشی مدرسه راهنمایی پسرانه غیردولتی هدایت قم">
+  <title>پرورشی هدایت قم</title>
+  <style>
+    :root{--green:#168653;--dark:#0c5937;--pale:#eaf8f0;--ink:#24352c;--white:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5faf6;color:var(--ink);line-height:1.9}
+    header{background:linear-gradient(135deg,var(--dark),#21a66a);color:#fff;text-align:center;padding:30px 16px 24px}
+    header .mark{font-size:42px}
+    header h1{margin:4px 0;font-size:clamp(22px,4vw,34px)}
+    header p{margin:4px auto 0;max-width:760px}
+    nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:#fff;box-shadow:0 3px 12px #143d2512;position:sticky;top:0;z-index:5}
+    nav button{border:0;background:var(--pale);color:var(--dark);padding:9px 15px;border-radius:20px;font:inherit;cursor:pointer}
+    nav button:hover,nav button.active{background:var(--green);color:white}
+    main{max-width:1050px;margin:25px auto;padding:0 16px;min-height:55vh}
+    .page{display:none;animation:appear .25s ease}
+    .page.active{display:block}
+    @keyframes appear{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+    .hero{background:linear-gradient(135deg,#e5f8ec,#fff);border:1px solid #ccebd8;border-radius:22px;padding:30px 22px;text-align:center}
+    .hero h2{color:var(--dark);font-size:clamp(22px,4vw,30px);margin:0 0 8px}
+    .hero p{max-width:720px;margin:0 auto}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin:20px 0}
+    .card{background:#fff;border:1px solid #e0eee5;border-radius:16px;padding:18px;box-shadow:0 5px 18px #123c2010}
+    .card .emoji{font-size:30px}
+    .card h3{color:var(--dark);margin:5px 0}
+    h2.section-title{color:var(--dark);margin-top:0}
+    .notice{background:#fff;border-right:4px solid var(--green);border-radius:10px;padding:13px 16px;margin:12px 0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+    .gallery-grid img{width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid #d8e9de;background:#edf5ef}
+    .photo-placeholder{height:190px;display:grid;place-items:center;text-align:center;padding:12px;background:#eaf8f0;border:1px dashed #91c9a8;border-radius:14px;color:#35694b}
+    .muted{color:#61756a;font-size:14px}
+    footer{text-align:center;background:#123e2a;color:#eaf8f0;padding:22px 12px;margin-top:35px}
+    footer p{margin:3px}
+    @media(max-width:500px){nav button{padding:7px 10px;font-size:13px}.hero{padding:23px 15px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="mark" aria-hidden="true">📚 🌱</div>
+    <h1>پرورشی مدرسه راهنمایی پسرانه غیردولتی هدایت قم</h1>
+    <p>جایی برای یادگیری، همکاری، خلاقیت و ساختن خاطره‌های خوب مدرسه</p>
+  </header>
+
+  <nav aria-label="منوی اصلی">
+    <button class="active" onclick="showPage('home',this)">خانه</button>
+    <button onclick="showPage('programs',this)">برنامه‌های پرورشی</button>
+    <button onclick="showPage('competitions',this)">مسابقات</button>
+    <button onclick="showPage('news',this)">خبرها و اطلاعیه‌ها</button>
+    <button onclick="showPage('gallery',this)">گالری تصاویر</button>
+  </nav>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <h2>به بخش پرورشی هدایت خوش آمدید! 🌟</h2>
+        <p>در اینجا می‌توانید با برنامه‌های پرورشی، مسابقه‌ها، خبرها و فعالیت‌های دانش‌آموزان مدرسه آشنا شوید.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="emoji">🎨</div><h3>فعالیت‌های خلاقانه</h3><p>فرصتی برای نشان دادن استعدادها، هنر و ایده‌های تازه.</p></article>
+        <article class="card"><div class="emoji">🏆</div><h3>مسابقات دانش‌آموزی</h3><p>شرکت در مسابقات فرهنگی، هنری، علمی و ورزشی.</p></article>
+        <article class="card"><div class="emoji">🤝</div><h3>کار گروهی</h3><p>یادگیری همکاری، مسئولیت‌پذیری و احترام به دیگران.</p></article>
+      </div>
+      <div class="notice"><strong>📌 توجه:</strong> اطلاعیه‌ها و تاریخ برنامه‌ها را از بخش «خبرها و اطلاعیه‌ها» دنبال کنید.</div>
+    </section>
+
+    <section id="programs" class="page">
+      <h2 class="section-title">🌱 برنامه‌های پرورشی</h2>
+      <div class="cards">
+        <article class="card"><div class="emoji">📖</div><h3>برنامه‌های فرهنگی</h3><p>فعالیت‌های مناسبتی، کتاب‌خوانی و برنامه‌های فرهنگی مدرسه.</p></article>
+        <article class="card"><div class="emoji">🖌️</div><h3>فعالیت‌های هنری</h3><p>نقاشی، کاردستی، طراحی و نمایش آثار دانش‌آموزان.</p></article>
+        <article class="card"><div class="emoji">⚽</div><h3>فعالیت‌های ورزشی</h3><p>برنامه‌های ورزشی و تشویق دانش‌آموزان به تحرک و همکاری.</p></article>
+        <article class="card"><div class="emoji">🌍</div><h3>مسئولیت اجتماعی</h3><p>تمرین مهربانی، نظم، حفظ محیط‌زیست و کمک به دیگران.</p></article>
+      </div>
+      <p class="muted">برای اضافه کردن برنامه‌های واقعی مدرسه، متن این قسمت را ویرایش کنید.</p>
+    </section>
+
+    <section id="competitions" class="page">
+      <h2 class="section-title">🏆 مسابقات و افتخارات</h2>
+      <div class="notice">مسابقه‌ها و نتایج مدرسه در این بخش منتشر می‌شوند.</div>
+      <div class="cards">
+        <article class="card"><h3>مسابقات فرهنگی و هنری</h3><p>جزئیات مسابقه، مهلت ثبت‌نام و نتایج را اینجا بنویسید.</p></article>
+        <article class="card"><h3>مسابقات علمی</h3><p>موضوع مسابقه و شرایط شرکت دانش‌آموزان را اینجا بنویسید.</p></article>
+        <article class="card"><h3>افتخارات دانش‌آموزان</h3><p>موفقیت‌ها و دستاوردهای دانش‌آموزان را اینجا معرفی کنید.</p></article>
+      </div>
+    </section>
+
+    <section id="news" class="page">
+      <h2 class="section-title">📣 خبرها و اطلاعیه‌ها</h2>
+      <div class="notice"><strong>اطلاعیه نمونه</strong><p>خبرها، زمان برنامه‌ها و اطلاعیه‌های جدید مدرسه در این بخش قرار می‌گیرند.</p><span class="muted">برای انتشار، این متن نمونه را با اطلاعیه واقعی جایگزین کنید.</span></div>
+    </section>
+
+    <section id="gallery" class="page">
+      <h2 class="section-title">🖼️ گالری تصاویر</h2>
+      <p>عکس فعالیت‌ها و برنامه‌های مدرسه را می‌توانید به این بخش اضافه کنید.</p>
+      <div class="gallery-grid">
+        <div class="photo-placeholder">📷<br>تصویر برنامه‌های مدرسه</div>
+        <div class="photo-placeholder">🎨<br>تصویر فعالیت‌های هنری</div>
+        <div class="photo-placeholder">🏆<br>تصویر مسابقات و افتخارات</div>
+      </div>
+      <p class="muted">برای نمایش عکس واقعی، فایل تصویر را در مخزن بارگذاری کنید و جای این کادر را با تگ img عوض کنید.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>وب‌سایت بخش پرورشی مدرسه هدایت قم</p>
+    <p>با آرزوی موفقیت برای همه دانش‌آموزان 🌿</p>
+  </footer>
+
+  <script>
+    function showPage(id, button) {
+      document.querySelectorAll('.page').forEach(function(page){ page.classList.remove('active'); });
+      document.querySelectorAll('nav button').forEach(function(btn){ btn.classList.remove('active'); });
+      var selected = document.getElementById(id);
+      if (selected) selected.classList.add('active');
+      if (button) button.classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  </script>
+</body>
+</html>
