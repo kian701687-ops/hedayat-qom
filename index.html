@@ -3,241 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مدرسه‌ی هدایت قم</title>
+<meta name="theme-color" content="#16805d">
+<title>پرورشی هدایت قم | مدرسه پسرانه هدایت</title>
 <style>
+:root{--green:#16805d;--dark:#10513e;--mint:#eaf7f0;--ink:#20342b;--muted:#66766e;--white:#fff;--line:#dcebe2}
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,sans-serif;background:#f6f8fa;color:#1a2236;line-height:1.9}
-a{color:#0f6b5c}
-header{background:linear-gradient(135deg,#0f6b5c,#16435f);color:#fff;text-align:center;padding:44px 16px}
-header h1{margin:0;font-size:2rem}
-nav{background:#fff;border-bottom:1px solid #e2e6ee;padding:8px 16px;display:flex;gap:16px;justify-content:center}
-nav a{text-decoration:none;cursor:pointer}
-section,.wrap{max-width:960px;margin:0 auto;padding:22px 16px}
-h2{color:#0f6b5c;margin:0 0 10px;font-size:1.2rem}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{background:#fff;border:1px solid #e2e6ee;border-radius:12px;padding:14px;margin-bottom:14px}
-.cards .card{margin:0}
-.card h3{margin:0}.card small{color:#667085}.card p{white-space:pre-wrap}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.ph{background:#fff;border:1px solid #e2e6ee;border-radius:12px;overflow:hidden}
-.ph img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.ph div{padding:8px;font-size:.85rem;display:flex;justify-content:space-between;gap:6px}
-footer{text-align:center;padding:20px;color:#667085}
-input,textarea,select{width:100%;padding:9px;margin-bottom:8px;border:1px solid #cfd5e2;border-radius:8px;font:inherit}
-button{background:#0f6b5c;color:#fff;border:0;border-radius:8px;padding:8px 16px;font:inherit;cursor:pointer}
-button.d{background:#c0392b;padding:2px 10px;font-size:.8rem}
-button.g{background:#667085}
-.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding:6px 0;gap:8px}
-.row img{width:48px;height:36px;object-fit:cover;border-radius:4px}
-.err{color:#c0392b;min-height:1.6em}
-[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f7fbf8;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,92%);margin:auto}
+.top{background:var(--dark);color:#fff;font-size:13px;padding:7px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{background:linear-gradient(125deg,#147451,#239b6b);color:#fff;overflow:hidden;position:relative}
+.hero{padding:42px 0 46px;display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:25px}
+.eyebrow{display:inline-block;border:1px solid #ffffff70;background:#ffffff18;border-radius:30px;padding:4px 13px;font-size:13px}
+h1{font-size:clamp(28px,4vw,44px);line-height:1.5;margin:12px 0}
+.hero p{color:#e5fff0;max-width:620px;margin:0 0 22px}
+.btn{display:inline-block;background:#fff;color:var(--dark);font-weight:bold;border-radius:12px;padding:10px 17px;margin:4px 5px 4px 0}
+.btn.alt{background:#ffffff18;color:#fff;border:1px solid #ffffff75}
+.hero-art{font-size:120px;text-align:center;filter:drop-shadow(0 12px 18px #064b3435)}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 15px #123a2410}
+nav .wrap{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;padding:10px 0}
+nav a{padding:7px 13px;border-radius:9px;font-size:14px}
+nav a:hover{background:var(--mint);color:var(--dark)}
+section{padding:38px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:18px}
+h2{font-size:25px;margin:0;color:var(--dark)}
+.section-head p{margin:3px 0 0;color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;box-shadow:0 7px 22px #164a2e08}
+.card .emoji{font-size:28px}
+.card h3{margin:8px 0 5px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.notice{border-right:4px solid var(--green)}
+.date{font-size:12px;color:var(--green);font-weight:bold}
+.banner{background:var(--mint);border:1px solid var(--line);border-radius:20px;padding:25px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.banner h2{margin-bottom:5px}
+.banner p{margin:0;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.photo{min-height:175px;border-radius:17px;background:linear-gradient(135deg,#dff3e7,#f4fbf6);border:1px dashed #a9d4ba;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;color:#367458}
+.photo span{display:block;font-size:34px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+footer{background:#103f31;color:#e5f5eb;padding:24px 0;text-align:center;font-size:13px}
+footer p{margin:3px}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:720px){.hero{grid-template-columns:1fr;text-align:center;padding:32px 0}.hero-art{font-size:80px}.cards,.gallery,.contact{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.banner{align-items:start;flex-direction:column}nav .wrap{gap:2px}nav a{font-size:12px;padding:6px 9px}}
 </style>
 </head>
 <body>
-
-<!-- ============ سایت عمومی ============ -->
-<div id="site">
-  <header><h1>🏫 مدرسه‌ی هدایت</h1><p>قم</p></header>
-  <nav><a href="#news">اخبار</a><a href="#gallery">گالری</a><a id="goPanel">ورود کادر مدرسه</a></nav>
-  <section id="news"><h2>اخبار</h2><div class="cards" id="pubNews"></div></section>
-  <section id="gallery"><h2>گالری تصاویر</h2><div class="gal" id="pubPhotos"></div></section>
-  <footer>© مدرسه‌ی هدایت قم</footer>
-</div>
-
-<!-- ============ پنل مدیریت ============ -->
-<div id="admin" hidden><div class="wrap">
-  <p><a id="goSite" style="cursor:pointer">← بازگشت به سایت</a></p>
-
-  <div class="card" id="setup" hidden><h2>ساخت حساب اولین مدیر</h2>
-    <input id="sn" placeholder="نام و نام خانوادگی"><input id="su" placeholder="نام کاربری (انگلیسی)">
-    <input id="sp" type="password" placeholder="رمز (حداقل ۶ کاراکتر)"><button id="sb">ساخت حساب مدیر</button></div>
-
-  <div class="card" id="login" hidden><h2>ورود مدیران و معلمان</h2>
-    <input id="lu" placeholder="نام کاربری"><input id="lp" type="password" placeholder="رمز"><button id="lb">ورود</button></div>
-
-  <div class="err" id="err"></div>
-
-  <div id="panel" hidden>
-    <div class="card top"><b id="who"></b><button class="g" id="out">خروج</button></div>
-
-    <div class="card"><h2>انتشار خبر</h2>
-      <input id="nt" placeholder="عنوان"><textarea id="nb" rows="4" placeholder="متن خبر"></textarea>
-      <button id="nbtn">انتشار</button><div id="nl"></div></div>
-
-    <div class="card"><h2>آپلود عکس</h2>
-      <input type="file" id="pf" accept="image/*"><input id="pc" placeholder="توضیح (اختیاری)">
-      <button id="pbtn">آپلود</button><div id="pl"></div></div>
-
-    <div id="mgr" hidden>
-      <div class="card"><h2>مدیریت کاربران (فقط مدیر)</h2>
-        <input id="un" placeholder="نام و نام خانوادگی"><input id="uu" placeholder="نام کاربری (انگلیسی)">
-        <input id="up" type="password" placeholder="رمز (حداقل ۶ کاراکتر)">
-        <select id="ur"><option value="teacher">معلم</option><option value="manager">مدیر</option></select>
-        <button id="ubtn">ساخت حساب</button><div id="ul"></div></div>
-      <div class="card"><h2>نسخه‌ی پشتیبان</h2>
-        <button id="bk">دانلود پشتیبان</button>
-        <input type="file" id="rf" accept=".json" style="margin-top:8px"><button class="g" id="rb">بازیابی از فایل</button></div>
-    </div>
+<div class="top"><div class="wrap"><span>مدرسه پسرانه هدایت قم</span><span>بخش پرورشی و فرهنگی مدرسه</span></div></div>
+<header>
+ <div class="wrap hero">
+  <div>
+   <span class="eyebrow">🌱 آموزش • اخلاق • دوستی</span>
+   <h1>به وب‌سایت پرورشی<br>مدرسه هدایت قم خوش آمدید</h1>
+   <p>اینجا می‌توانیم خبرها، برنامه‌های پرورشی، فعالیت‌های دانش‌آموزان و عکس‌های خاطره‌انگیز مدرسه را با هم به اشتراک بگذاریم.</p>
+   <a class="btn" href="#news">دیدن اطلاعیه‌ها ↓</a>
+   <a class="btn alt" href="#gallery">گالری مدرسه</a>
   </div>
-</div></div>
-
-<script>
-var KEY = "hedayat-school-v1";
-var $ = function (i) { return document.getElementById(i); };
-function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-function fd(t) { return new Date(t).toLocaleDateString("fa-IR"); }
-function rid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
-
-/* ---------- داده ---------- */
-var D;
-function load() { try { D = JSON.parse(localStorage.getItem(KEY)); } catch (e) {} if (!D || !D.users) D = { users: [], news: [], photos: [] }; }
-function save() { try { localStorage.setItem(KEY, JSON.stringify(D)); return true; } catch (e) { fail("حافظه‌ی مرورگر پر است. چند عکس قدیمی را حذف کنید."); return false; } }
-load();
-
-function hash(p) {
-  var s = "hedayat:" + p;
-  if (window.crypto && crypto.subtle) {
-    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)).then(function (b) {
-      return Array.from(new Uint8Array(b)).map(function (x) { return x.toString(16).padStart(2, "0"); }).join("");
-    });
-  }
-  return Promise.resolve(btoa(unescape(encodeURIComponent(s))));
-}
-function fail(m) { $("err").textContent = m; }
-function ok() { $("err").textContent = ""; }
-
-/* ---------- سایت عمومی ---------- */
-function drawSite() {
-  $("pubNews").innerHTML = D.news.map(function (n) {
-    return '<div class="card"><h3>' + esc(n.title) + '</h3><small>' + fd(n.ts) + ' · ' + esc(n.by) + '</small><p>' + esc(n.body) + '</p></div>';
-  }).join("") || "<p>هنوز خبری ثبت نشده است.</p>";
-  $("pubPhotos").innerHTML = D.photos.map(function (p) {
-    return '<div class="ph"><img src="' + p.data + '" alt=""><div><span>' + esc(p.cap || "") + '</span><a href="' + p.data + '" download="hedayat-' + p.id + '.jpg">دانلود</a></div></div>';
-  }).join("") || "<p>هنوز عکسی آپلود نشده است.</p>";
-}
-
-/* ---------- ورود و نقش‌ها ---------- */
-var me = null;
-function showView(v) { $("site").hidden = v !== "site"; $("admin").hidden = v !== "admin"; if (v === "site") drawSite(); else drawAdmin(); }
-$("goPanel").onclick = function () { showView("admin"); };
-$("goSite").onclick = function () { showView("site"); };
-
-function drawAdmin() {
-  var first = D.users.length === 0;
-  me = me && D.users.find(function (u) { return u.id === me.id; }) || null;
-  $("setup").hidden = !first;
-  $("login").hidden = !!me || first;
-  $("panel").hidden = !me;
-  if (!me) return;
-  $("who").textContent = me.name + " — " + (me.role === "manager" ? "مدیر" : "معلم");
-  $("mgr").hidden = me.role !== "manager";
-  var mine = function (x) { return me.role === "manager" || x.uid === me.id; };
-  $("nl").innerHTML = D.news.filter(mine).map(function (x) {
-    return '<div class="row"><span>' + esc(x.title) + ' <small>(' + esc(x.by) + ')</small></span><button class="d" data-k="news" data-id="' + x.id + '">حذف</button></div>';
-  }).join("");
-  $("pl").innerHTML = D.photos.filter(mine).map(function (x) {
-    return '<div class="row"><img src="' + x.data + '"><span>' + esc(x.cap || "") + ' <small>(' + esc(x.by) + ')</small></span><button class="d" data-k="photos" data-id="' + x.id + '">حذف</button></div>';
-  }).join("");
-  $("ul").innerHTML = D.users.map(function (x) {
-    return '<div class="row"><span>' + esc(x.name) + ' (' + esc(x.username) + ') — ' + (x.role === "manager" ? "مدیر" : "معلم") + '</span>' +
-      (x.id === me.id ? "" : '<button class="d" data-k="users" data-id="' + x.id + '">حذف</button>') + '</div>';
-  }).join("");
-}
-
-function newUser(name, un, pw, role) {
-  name = name.trim(); un = un.trim().toLowerCase();
-  if (!name) return Promise.reject("نام را وارد کنید");
-  if (!/^[a-z0-9_.]{3,30}$/.test(un)) return Promise.reject("نام کاربری: ۳ تا ۳۰ حرف انگلیسی، عدد، _ یا .");
-  if (pw.length < 6) return Promise.reject("رمز باید حداقل ۶ کاراکتر باشد");
-  if (D.users.some(function (u) { return u.username === un; })) return Promise.reject("این نام کاربری وجود دارد");
-  return hash(pw).then(function (h) { return { id: rid(), name: name, username: un, role: role, hash: h }; });
-}
-
-$("sb").onclick = function () {
-  if (D.users.length) return;
-  newUser($("sn").value, $("su").value, $("sp").value, "manager").then(function (u) {
-    D.users.push(u); if (save()) { me = u; ok(); drawAdmin(); }
-  }).catch(fail);
-};
-$("lb").onclick = function () {
-  var un = $("lu").value.trim().toLowerCase(), u = D.users.find(function (x) { return x.username === un; });
-  hash($("lp").value).then(function (h) {
-    if (u && u.hash === h) { me = u; ok(); $("lp").value = ""; drawAdmin(); } else fail("نام کاربری یا رمز اشتباه است");
-  });
-};
-$("out").onclick = function () { me = null; drawAdmin(); };
-
-/* ---------- خبر ---------- */
-$("nbtn").onclick = function () {
-  var t = $("nt").value.trim(), b = $("nb").value.trim();
-  if (!t || !b) return fail("عنوان و متن خبر لازم است");
-  D.news.unshift({ id: rid(), title: t.slice(0, 150), body: b.slice(0, 3000), ts: Date.now(), by: me.name, uid: me.id });
-  if (save()) { ok(); $("nt").value = ""; $("nb").value = ""; drawAdmin(); }
-};
-
-/* ---------- عکس (کوچک و فشرده می‌شود تا در حافظه جا شود) ---------- */
-function shrink(file, cb) {
-  var r = new FileReader();
-  r.onload = function () {
-    var i = new Image();
-    i.onload = function () {
-      var s = Math.min(1, 900 / Math.max(i.width, i.height)), c = document.createElement("canvas");
-      c.width = i.width * s; c.height = i.height * s;
-      c.getContext("2d").drawImage(i, 0, 0, c.width, c.height);
-      cb(c.toDataURL("image/jpeg", 0.7));
-    };
-    i.onerror = function () { fail("این فایل عکس معتبر نیست"); };
-    i.src = r.result;
-  };
-  r.readAsDataURL(file);
-}
-$("pbtn").onclick = function () {
-  var f = $("pf").files[0];
-  if (!f) return fail("عکسی انتخاب نشده است");
-  shrink(f, function (data) {
-    D.photos.unshift({ id: rid(), data: data, cap: $("pc").value.trim().slice(0, 100), ts: Date.now(), by: me.name, uid: me.id });
-    if (save()) { ok(); $("pf").value = ""; $("pc").value = ""; drawAdmin(); } else D.photos.shift();
-  });
-};
-
-/* ---------- کاربران ---------- */
-$("ubtn").onclick = function () {
-  newUser($("un").value, $("uu").value, $("up").value, $("ur").value).then(function (u) {
-    D.users.push(u); if (save()) { ok(); $("un").value = ""; $("uu").value = ""; $("up").value = ""; drawAdmin(); }
-  }).catch(fail);
-};
-
-/* ---------- حذف (معلم فقط مطالب خودش، مدیر همه) ---------- */
-document.addEventListener("click", function (e) {
-  var d = e.target.dataset;
-  if (!d.k || !me || !confirm("حذف شود؟")) return;
-  var list = D[d.k], item = list.find(function (x) { return x.id === d.id; });
-  if (!item) return;
-  if (d.k === "users") { if (me.role !== "manager" || item.id === me.id) return; }
-  else if (me.role !== "manager" && item.uid !== me.id) return;
-  D[d.k] = list.filter(function (x) { return x !== item; });
-  save(); drawAdmin();
-});
-
-/* ---------- پشتیبان ---------- */
-$("bk").onclick = function () {
-  var a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(D)], { type: "application/json" }));
-  a.download = "hedayat-backup.json"; a.click();
-};
-$("rb").onclick = function () {
-  var f = $("rf").files[0]; if (!f) return fail("فایل پشتیبان را انتخاب کنید");
-  if (!confirm("اطلاعات فعلی با فایل پشتیبان جایگزین می‌شود. ادامه می‌دهید؟")) return;
-  var r = new FileReader();
-  r.onload = function () {
-    try { var x = JSON.parse(r.result); if (!x.users || !x.news || !x.photos) throw 0; D = x; save(); me = null; drawAdmin(); ok(); }
-    catch (e) { fail("فایل پشتیبان معتبر نیست"); }
-  };
-  r.readAsText(f);
-};
-
-drawSite();
-</script>
+  <div class="hero-art" aria-hidden="true">🌿📚</div>
+ </div>
+</header>
+<nav aria-label="فهرست اصلی"><div class="wrap">
+ <a href="#home">خانه</a><a href="#about">درباره ما</a><a href="#news">خبرها و اطلاعیه‌ها</a><a href="#activities">فعالیت‌ها</a><a href="#gallery">گالری عکس</a><a href="#contact">ارتباط</a>
+</div></nav>
+<main id="home">
+<section id="about"><div class="wrap">
+ <div class="section-head"><div><h2>درباره بخش پرورشی</h2><p>کنار هم برای ساختن روزهایی بهتر در مدرسه</p></div></div>
+ <div class="banner"><div><h2>مدرسه، جای یادگیری و رشد است 💚</h2><p>در این بخش، برنامه‌های فرهنگی، مسابقه‌ها، مناسبت‌ها و فعالیت‌های گروهی مدرسه معرفی می‌شوند.</p></div><span style="font-size:44px">🌼</span></div>
+</div></section>
+<section id="news"><div class="wrap">
+ <div class="section-head"><div><h2>خبرها و اطلاعیه‌ها</h2><p>اطلاعیه‌های مهم مدرسه را از این قسمت دنبال کنید.</p></div></div>
+ <div class="cards">
+  <article class="card notice"><div class="emoji">📣</div><span class="date">اطلاعیه مدرسه</span><h3>اطلاعیه‌های جدید</h3><p>به‌زودی اطلاعیه‌های رسمی و برنامه‌های مدرسه در این قسمت قرار می‌گیرند.</p></article>
+  <article class="card notice"><div class="emoji">🗓️</div><span class="date">برنامه‌ها</span><h3>برنامه‌های پرورشی</h3><p>زمان و توضیحات برنامه‌های فرهنگی، مسابقه‌ها و مراسم مدرسه اینجا منتشر می‌شود.</p></article>
+  <article class="card notice"><div class="emoji">🏆</div><span class="date">افتخارهای دانش‌آموزی</span><h3>خبرهای خوب مدرسه</h3><p>دستاوردها و موفقیت‌های دانش‌آموزان را در این بخش معرفی خواهیم کرد.</p></article>
+ </div>
+</div></section>
+<section id="activities"><div class="wrap">
+ <div class="section-head"><div><h2>فعالیت‌های مدرسه</h2><p>بخش‌هایی برای برنامه‌های آینده</p></div></div>
+ <div class="cards">
+  <article class="card"><div class="emoji">🤝</div><h3>کارهای گروهی</h3><p>فعالیت‌های دوستانه و همکاری دانش‌آموزان.</p></article>
+  <article class="card"><div class="emoji">🎨</div><h3>مسابقه‌ها و خلاقیت</h3><p>معرفی آثار، مسابقه‌ها و برنامه‌های هنری.</p></article>
+  <article class="card"><div class="emoji">🌍</div><h3>مناسبت‌ها</h3><p>گزارش مراسم و مناسبت‌های فرهنگی و ملی.</p></article>
+ </div>
+</div></section>
+<section id="gallery"><div class="wrap">
+ <div class="section-head"><div><h2>گالری عکس</h2><p>جای عکس‌های مدرسه و برنامه‌های دانش‌آموزان</p></div></div>
+ <div class="gallery">
+  <div class="photo"><div><span>📷</span>عکس حیاط یا ساختمان مدرسه</div></div>
+  <div class="photo"><div><span>🎉</span>عکس مراسم و مناسبت‌ها</div></div>
+  <div class="photo"><div><span>👨‍🎓</span>عکس فعالیت‌های دانش‌آموزی</div></div>
+ </div>
+ <p class="small">این کادرها فعلاً جایگاه عکس هستند؛ برای نمایش عکس واقعی باید فایل عکس به مخزن GitHub اضافه و کد به‌روزرسانی شود.</p>
+</div></section>
+<section id="contact"><div class="wrap">
+ <div class="section-head"><div><h2>ارتباط با مدرسه</h2><p>اطلاعات تماس پس از تأیید مدرسه در این قسمت اضافه می‌شود.</p></div></div>
+ <div class="contact">
+  <div class="card"><h3>📍 نشانی</h3><p>قم — نشانی دقیق مدرسه را بعداً اضافه می‌کنیم.</p></div>
+  <div class="card"><h3>☎️ تلفن</h3><p>شماره تماس رسمی مدرسه پس از دریافت، اینجا درج می‌شود.</p></div>
+ </div>
+</div></section>
+</main>
+<footer><div class="wrap"><p>🌿 پرورشی هدایت قم</p><p>طراحی و توسعه: محمدیان سلیمی</p><p>این وب‌سایت به‌تدریج با خبرها و عکس‌های جدید تکمیل می‌شود.</p></div></footer>
 </body>
 </html>
